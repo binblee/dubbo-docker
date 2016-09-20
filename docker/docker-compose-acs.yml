@@ -1,0 +1,16 @@
+version: "2"
+services:
+  zookeeper:
+    image: 'registry.aliyuncs.com/acs-sample/zookeeper:3.4.8'
+    hostname: zookeeper
+  provider:
+    image: 'registry.cn-hangzhou.aliyuncs.com/jingshanlb/dubbo-springboot-provider:latest'
+    environment:
+      - ZOOKEEPER_SERVER=zookeeper
+  consumer:
+    image: 'registry.cn-hangzhou.aliyuncs.com/jingshanlb/dubbo-springboot-consumer:latest'
+    environment:
+      - ZOOKEEPER_SERVER=zookeeper
+      - SERVER_PORT=8899
+    labels:
+      aliyun.routing.port_8899: http://ds-consumer

@@ -1,0 +1,16 @@
+version: "2"
+services:
+  zookeeper:
+    image: 'registry.aliyuncs.com/acs-sample/zookeeper:3.4.8'
+    hostname: zookeeper
+  provider:
+    image: 'provider:latest'
+    environment:
+      - ZOOKEEPER_SERVER=zookeeper
+  consumer:
+    image: 'consumer:latest'
+    environment:
+      - ZOOKEEPER_SERVER=zookeeper
+      - SERVER_PORT=8899
+    ports:
+      - 8899:8899
