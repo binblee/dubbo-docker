@@ -16,7 +16,7 @@
     </parent>
     <modules>
         <module>service-api</module>
-        <module>service-provider</module>
+        <module>service-producer</module>
         <module>service-consumer</module>
     </modules>
 

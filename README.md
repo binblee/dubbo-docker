@@ -17,16 +17,16 @@ service consumer access the producer.
 
 Run a docker image.
 
-## Service Provider
+## Service Producer
 
-Code in [service-provider](service-provider). API defined in [service-api](service-api).
+Code in [service-producer](service-producer). API defined in [service-api](service-api).
 
 Build docker image:
 
 ```
-cd service-provider
+cd service-producer
 mvn package
-docker build -t provider .
+docker build -t producer .
 ```
 
 ## Service Consumer
