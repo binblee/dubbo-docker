@@ -4,7 +4,7 @@ services:
     image: 'registry.aliyuncs.com/acs-sample/zookeeper:3.4.8'
     hostname: zookeeper
   producer:
-    image: 'registry.cn-hangzhou.aliyuncs.com/jingshanlb/dubbo-springboot-producer:latest'
+    image: 'producer:latest'
     environment:
       - ZOOKEEPER_SERVER=zookeeper
   consumer:
