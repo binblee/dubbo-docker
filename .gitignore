@@ -28,6 +28,11 @@ hs_err_pid*
 .idea
 *.iml
 
+# atom
+.classpath
+.project
+.settings
+
 # Others
 *~
 .DS_Store
