@@ -1,0 +1,15 @@
+version: "3"
+services:
+  zookeeper:
+    image: 'registry.aliyuncs.com/acs-sample/zookeeper:3.4.8'
+  producer:
+    image: 'registry.cn-hangzhou.aliyuncs.com/jingshanlb/dubbo-springboot-producer:latest'
+    environment:
+      - ZOOKEEPER_SERVER=zookeeper
+  consumer:
+    image: 'registry.cn-hangzhou.aliyuncs.com/jingshanlb/dubbo-springboot-consumer:latest'
+    environment:
+      - ZOOKEEPER_SERVER=zookeeper
+      - SERVER_PORT=8899
+    ports:
+      - '8899'
