@@ -1,5 +1,10 @@
 # 在Docker中运行Dubbo应用
 
+## 更新历史
+- 2017.11.30 增加利用v3版本compose文件部署示例。
+
+## Dubbo概述
+
 ![](logos.png)
 
 Dubbo是阿里开源的一个分布式服务框架，在国内粉丝很多。[官网](http://dubbo.io)上的介绍是：
@@ -311,6 +316,8 @@ http://ds-consumer.c67***8cd5.cn-shenzhen.alicontainer.com
 ![](consumer2.png)
 
 至此，我们成功地在云上运行了Dubbo应用。
+
+本文中的compose模版部署为v2版本，如果大家想尝试利用v3版本部署，可以访问[github](https://github.com/binblee/dubbo-docker/blob/master/docker/docker-compose-v3.yml)
 
 ## 讨论
 

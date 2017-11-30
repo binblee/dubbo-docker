@@ -31,7 +31,7 @@ docker build -t producer .
 
 ## Service Consumer
 
-Code in [service-consumer](service-consumer). 
+Code in [service-consumer](service-consumer).
 
 Build docker image:
 
@@ -58,5 +58,8 @@ Greetings from Dubbo Docker
 
 ## Run it on Alibaba Cloud
 
-Use [docker/docker-compose-acs.yml](docker/docker-compose-acs.yml) to deploy this application to 
+Use [docker/docker-compose-acs.yml](docker/docker-compose-acs.yml) to deploy this application to
 Aliyun Container Service (Alibaba Cloud).
+
+2017.11.30 Update:
+Add compose v3 sample yml file: [docker/docker-compose-v3.yml](docker/docker-compose-v3.yml)
