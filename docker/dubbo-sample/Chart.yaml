@@ -1,0 +1,7 @@
+name: dubbo-sample
+description: A generated Helm Chart for dubbo-sample from Skippbox Kompose
+version: 0.0.1
+keywords:
+  - dubbo-sample
+sources:
+home:

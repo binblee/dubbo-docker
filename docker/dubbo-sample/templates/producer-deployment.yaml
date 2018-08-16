@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose-v3.yml -c -o dubbo-sample
+    kompose.version: 1.14.0 ()
+  creationTimestamp: null
+  labels:
+    io.kompose.service: producer
+  name: producer
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: producer
+    spec:
+      containers:
+      - env:
+        - name: ZOOKEEPER_SERVER
+          value: zookeeper
+        image: registry.cn-hangzhou.aliyuncs.com/jingshanlb/dubbo-springboot-producer:latest
+        name: producer
+        resources: {}
+      restartPolicy: Always
+status: {}
